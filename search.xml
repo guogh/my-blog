@@ -1,0 +1,12 @@
+---
+---
+<?xml version="1.0" encoding="utf-8" ?>
+<search>
+{% for post in site.posts %}
+  <entry>
+    <title>{{ post.title | xml_escape }}</title>
+    <url>{{ post.url | relative_url | xml_escape }}</url>
+    <content type="html"><![CDATA[{{ post.content | strip_html | strip_newlines | replace: ']]>', ']]&gt;' }}]]></content>
+  </entry>
+{% endfor %}
+</search>
