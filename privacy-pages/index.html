@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隐私政策中心</title>
+<style>
+  :root {
+    --bg: #f5f5f7;
+    --card: #ffffff;
+    --text: #1d1d1f;
+    --text-sub: #6e6e73;
+    --accent: #0071e3;
+    --border: #e5e5ea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000;
+      --card: #1c1c1e;
+      --text: #f5f5f7;
+      --text-sub: #98989d;
+      --accent: #2997ff;
+      --border: #2c2c2e;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+                 "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 16px;
+  }
+  .wrap { width: 100%; max-width: 680px; }
+
+  header { text-align: center; margin-bottom: 32px; }
+  .eyebrow {
+    display: inline-block;
+    font-size: 12.5px; font-weight: 600; letter-spacing: 0.04em;
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    padding: 4px 12px; border-radius: 980px;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-size: 34px; font-weight: 700; letter-spacing: -0.025em;
+    line-height: 1.2;
+  }
+  .subtitle { color: var(--text-sub); font-size: 15px; margin-top: 10px; }
+
+  .card-list { display: flex; flex-direction: column; gap: 14px; }
+  .card {
+    display: flex; align-items: center; gap: 18px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 22px 24px;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform .28s cubic-bezier(.25,.8,.25,1),
+               box-shadow .28s cubic-bezier(.25,.8,.25,1),
+               border-color .28s;
+    opacity: 0;
+    transform: translateY(18px);
+    animation: rise .7s cubic-bezier(.25,.8,.25,1) forwards;
+  }
+  .card:nth-child(1) { animation-delay: .08s; }
+  .card:nth-child(2) { animation-delay: .2s; }
+  @keyframes rise {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+    box-shadow: 0 12px 32px rgba(0,0,0,.08);
+  }
+  .icon {
+    flex-shrink: 0;
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px;
+  }
+  .icon.blue  { background: linear-gradient(135deg,#0a84ff,#5e5ce6); }
+  .icon.green { background: linear-gradient(135deg,#30d158,#28b866); }
+  .info { flex: 1; min-width: 0; }
+  .name { font-size: 17px; font-weight: 600; }
+  .name small { color: var(--text-sub); font-weight: 400; font-size: 13px; margin-left: 6px; }
+  .desc { color: var(--text-sub); font-size: 13.5px; margin-top: 2px; }
+  .meta { font-size: 12px; color: var(--text-sub); margin-top: 6px; }
+  .arrow {
+    flex-shrink: 0;
+    color: var(--accent);
+    font-size: 20px;
+    transition: transform .28s cubic-bezier(.25,.8,.25,1);
+  }
+  .card:hover .arrow { transform: translateX(5px); }
+
+  footer {
+    margin-top: 36px; text-align: center;
+    color: var(--text-sub); font-size: 12.5px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card { opacity: 1; transform: none; animation: none; }
+    .card:hover { transform: none; }
+    .card:hover .arrow { transform: none; }
+  }
+  @media (max-width: 480px) {
+    h1 { font-size: 27px; }
+    .card { padding: 18px; border-radius: 17px; }
+    .icon { width: 44px; height: 44px; font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="eyebrow">PRIVACY CENTER</span>
+      <h1>隐私政策中心</h1>
+      <p class="subtitle">我们尊重并保护每一位用户的隐私，请选择产品查看完整政策</p>
+    </header>
+
+    <nav class="card-list">
+      <a class="card" href="lookimage-privacy.html">
+        <div class="icon blue">🖼️</div>
+        <div class="info">
+          <div class="name">看图 <small>LookImage</small></div>
+          <div class="desc">纯本地图片查看工具，数据不出设备</div>
+          <div class="meta">生效日期：2026-09-28 · 中文 / English</div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+
+      <a class="card" href="tiandilingqi-privacy.html">
+        <div class="icon green">🌿</div>
+        <div class="info">
+          <div class="name">节气历</div>
+          <div class="desc">个人信息收集、使用与保护说明</div>
+          <div class="meta">生效日期：2025-09-22</div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+    </nav>
+
+    <footer>© 2026 隐私政策中心</footer>
+  </div>
+</body>
+</html>
