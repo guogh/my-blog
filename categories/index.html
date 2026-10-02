@@ -19,7 +19,7 @@ layout: default
 							<ul class="category-list">
 								{% for category in site.categories %}
 								<li class="category-list-item">
-									<a class="category-list-link" href="/categories/signle_categories.html?cat={{ category | first }}">{{ category | first }}</a>
+									<a class="category-list-link" href="{{ site.baseurl }}/categories/signle_categories.html?cat={{ category | first }}">{{ category | first }}</a>
 									<span class="category-list-count">{{ category | last | size }}</span>
 								</li>
 								{% endfor %}

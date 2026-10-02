@@ -1,3 +1,7 @@
+#站点地址（项目级 Page 必须配置 baseurl 为仓库名）
+url: https://guogh.github.io
+baseurl: /my-blog
+
 #使用rouge来进行代码高亮（GitHub Pages 仅支持 rouge）
 highlighter: rouge
 

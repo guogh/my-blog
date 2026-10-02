@@ -11,7 +11,7 @@ layout: default
 					<article class="post post-type-normal home-page-list" style="opacity: 1;">
 						<header class="post-header">
 							<h2 class="post-title" itemprop="name headline">
-                					<a class="post-title-link" href="{{ post.url }}" itemprop="url" style="border-bottom: 0px solid #999;">
+                					<a class="post-title-link" href="{{ post.url | relative_url }}" itemprop="url" style="border-bottom: 0px solid #999;">
                   					{{ post.title }}
                 					</a>
           					</h2>
@@ -35,7 +35,7 @@ layout: default
 								<span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
 									
 									{% for categorie in post.categories %}
-                  					<a href="/categories/signle_categories.html?cat={{ categorie }}" itemprop="url" rel="index">
+                  					<a href="{{ site.baseurl }}/categories/signle_categories.html?cat={{ categorie }}" itemprop="url" rel="index">
                     						<span itemprop="name">{{ categorie }}</span>
 									</a>&nbsp;&nbsp;
 									{% endfor %}
@@ -47,7 +47,7 @@ layout: default
 						<div class="post-body" itemprop="articleBody">
 							<p>{{ post.excerpt }}</p>
 							<div class="post-button text-center">
-								<a class="btn" href="{{ post.url }}" rel="contents">阅读全文 »</a>
+								<a class="btn" href="{{ post.url | relative_url }}" rel="contents">阅读全文 »</a>
 							</div>
 						</div>
 					</article>
